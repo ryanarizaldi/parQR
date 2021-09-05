@@ -1,0 +1,1 @@
+<?php header('Location: http://localhost/parqr/public') ?>
