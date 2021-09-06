@@ -41,6 +41,36 @@ class M_kendaraan extends Model
         ];
         return $this->db->table($this->table)->insert($data);
     }
+    public function addDiv($no_plat, $nama_pemilik, $jabatan)
+    {
+        // return $this->query("INSERT INTO `kendaraan` VALUES ('$no_plat', '$nama_pemilik', 'Kepala Departemen $jabatan')");
+        $data = [
+            'no_plat' => $no_plat,
+            'nama_pemilik' => $nama_pemilik,
+            'jabatan' => "Kepala Divisi $jabatan",
+        ];
+        return $this->db->table($this->table)->insert($data);
+    }
+    public function addDir($no_plat, $nama_pemilik, $jabatan)
+    {
+        // return $this->query("INSERT INTO `kendaraan` VALUES ('$no_plat', '$nama_pemilik', 'Kepala Departemen $jabatan')");
+        $data = [
+            'no_plat' => $no_plat,
+            'nama_pemilik' => $nama_pemilik,
+            'jabatan' => "Direksi $jabatan",
+        ];
+        return $this->db->table($this->table)->insert($data);
+    }
+    public function addVip($no_plat, $nama_pemilik, $jabatan)
+    {
+        // return $this->query("INSERT INTO `kendaraan` VALUES ('$no_plat', '$nama_pemilik', 'Kepala Departemen $jabatan')");
+        $data = [
+            'no_plat' => $no_plat,
+            'nama_pemilik' => $nama_pemilik,
+            'jabatan' => "(VIP) $jabatan",
+        ];
+        return $this->db->table($this->table)->insert($data);
+    }
 
     public function updateDept($data, $id)
     {

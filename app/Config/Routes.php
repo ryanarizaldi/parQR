@@ -41,7 +41,10 @@ $routes->get('/direksi/add', 'Parkiran::addDireksi', ['as' => 'direksiAdd']);
 $routes->get('/divisi/add', 'Parkiran::addDivisi', ['as' => 'divisiAdd']);
 $routes->get('/departemen/add', 'Parkiran::addDepartemen', ['as' => 'departemenAdd']);
 $routes->get('/departemen/edit/(:any)', 'Parkiran::editDept/$1', ['as' => 'departemenEdit']);
-$routes->get('/vip/edit', 'Parkiran::editVip', ['as' => 'vipEdit']);
+$routes->get('/vip/edit/(:any)', 'Parkiran::editVip/$1', ['as' => 'vipEdit']);
+$routes->get('/direksi/edit/(:any)', 'Parkiran::editDir/$1', ['as' => 'dirEdit']);
+$routes->get('/divisi/edit/(:any)', 'Parkiran::editDiv/$1', ['as' => 'divEdit']);
+$routes->get('/print/(:any)', 'Parkiran::printBarcode/$1', ['as' => 'print']);
 
 // $routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
 

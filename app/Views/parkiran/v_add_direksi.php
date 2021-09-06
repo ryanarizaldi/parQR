@@ -29,7 +29,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="<?= base_url() ?>">
+              <form method="post" action="<?= base_url() ?>/Parkiran/addDirAction">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="no_plat">Plat Nomor Kendaraan</label>
@@ -41,7 +41,12 @@
                   </div>
                   <div class="form-group">
                     <label for="jabatan">Jabatan</label>
-                    <input type="text" class="form-control" id="jabatan" placeholder="Masukkan jabatan" name="jabatan">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Direksi</span>
+                        </div>
+                        <input type="text" class="form-control" id="jabatan" placeholder="Masukkan jabatan Direksi" name="jabatan">
+                    </div>
                   </div>
                 <!-- /.card-body -->
 

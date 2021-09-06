@@ -29,19 +29,19 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="<?= base_url() ?>">
+              <form method="post" action="<?= base_url('/Parkiran/updateDir/'.$res['no_plat']) ?>">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="no_plat">Plat Nomor Kendaraan</label>
-                    <input type="text" class="form-control" id="no_plat" placeholder="Masukkan plat nomor kendaraan" name="no_plat">
+                    <input type="text" class="form-control" id="no_plat" placeholder="Masukkan plat nomor kendaraan" name="no_plat" value="<?= $res['no_plat'] ?>">
                   </div>
                   <div class="form-group">
                     <label for="nama_pemilik">Nama Pemilik Kendaraan</label>
-                    <input type="text" class="form-control" id="nama_pemilik" placeholder="Masukkan nama pemilik kendaraan" name="nama_pemilik">
+                    <input type="text" class="form-control" id="nama_pemilik" placeholder="Masukkan nama pemilik kendaraan" name="nama_pemilik" value="<?= $res['nama_pemilik'] ?>">
                   </div>
                   <div class="form-group">
                     <label for="jabatan">Jabatan</label>
-                    <input type="text" class="form-control" id="jabatan" placeholder="Masukkan jabatan" name="jabatan">
+                    <input type="text" class="form-control" id="jabatan" placeholder="Masukkan jabatan" name="jabatan" value="<?= $res['jabatan'] ?>">
                   </div>
                 <!-- /.card-body -->
 

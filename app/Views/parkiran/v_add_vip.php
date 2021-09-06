@@ -29,7 +29,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="<?= base_url() ?>">
+              <form method="post" action="<?= base_url() ?>/Parkiran/addVipAction">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="no_plat">Plat Nomor Kendaraan</label>
