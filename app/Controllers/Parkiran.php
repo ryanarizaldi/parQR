@@ -71,10 +71,29 @@ class Parkiran extends BaseController
         return view('parkiran/v_add_departemen');
     }
 
-    public function deleteCar($no_plat)
+    public function deleteCarDept($no_plat)
     {
         $car = new M_kendaraan();
         $delete = $car->deleteCar($no_plat);
+        return redirect('departemen');
+    }
+    public function deleteCarDiv($no_plat)
+    {
+        $car = new M_kendaraan();
+        $delete = $car->deleteCar($no_plat);
+        return redirect('divisi');
+    }
+    public function deleteCarDir($no_plat)
+    {
+        $car = new M_kendaraan();
+        $delete = $car->deleteCar($no_plat);
+        return redirect('direksi');
+    }
+    public function deleteCarVip($no_plat)
+    {
+        $car = new M_kendaraan();
+        $delete = $car->deleteCar($no_plat);
+        return redirect('vip');
     }
 
     public function addDeptAction()

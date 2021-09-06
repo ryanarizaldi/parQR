@@ -51,8 +51,8 @@
                             <td><?= $key['jabatan'] ?></td>
                             <td>
                                 <a href="<?= base_url('direksi/edit/'.$key['no_plat']) ?>" class="btn btn-info"><i class="fas fa-edit"> Edit </i></a>
-                                <a class="btn btn-danger remove"><i class="fas fa-trash" onclick="asd()"> Hapus </i></a>
-                                <a class="btn btn-info " target="_blank" href="<?= base_url('print/'.$key['no_plat']) ?>"><i class="fas fa-print" > Print Barcode </i></a>
+                                <a href="<?= base_url('Parkiran/deleteCar/'.$key['no_plat'])?>" class="btn btn-danger remove"><i class="fas fa-trash" onclick="asd()"> Hapus </i></a>
+                                <a class="btn btn-info " target="_blank" href="<?= base_url('print/'.$key['no_plat']) ?>"><i class="fas fa-print" > Print QR Code </i></a>
                             </td>
                         </tr>
                         <?php $num++ ?>

@@ -45,6 +45,10 @@ $routes->get('/vip/edit/(:any)', 'Parkiran::editVip/$1', ['as' => 'vipEdit']);
 $routes->get('/direksi/edit/(:any)', 'Parkiran::editDir/$1', ['as' => 'dirEdit']);
 $routes->get('/divisi/edit/(:any)', 'Parkiran::editDiv/$1', ['as' => 'divEdit']);
 $routes->get('/print/(:any)', 'Parkiran::printBarcode/$1', ['as' => 'print']);
+$routes->get('/deleteCarDept/(:any)', 'Parkiran::deleteCarDept/$1', ['as' => 'deleteDept']);
+$routes->get('/deleteCarDiv/(:any)', 'Parkiran::deleteCarDiv/$1', ['as' => 'deleteDiv']);
+$routes->get('/deleteCarDir(:any)', 'Parkiran::deleteCarDir/$1', ['as' => 'deleteDir']);
+$routes->get('/deleteCarVip/(:any)', 'Parkiran::deleteCarVip/$1', ['as' => 'deleteVip']);
 
 // $routes->get('/dashboard', 'Dashboard::index',['filter' => 'auth']);
 

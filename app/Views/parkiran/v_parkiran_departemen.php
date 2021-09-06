@@ -1,6 +1,7 @@
 <?= $this->extend('template') ?>
 <?= $this->section('content') ?>
     <!-- Content Header (Page header) -->
+  
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -51,8 +52,8 @@
                             <td><?= $key['jabatan'] ?></td>
                             <td>
                                 <a href="<?= base_url('departemen/edit/'.$key['no_plat']) ?>" class="btn btn-info"><i class="fas fa-edit"> Edit </i></a>
-                                <a class="btn btn-danger remove"><i class="fas fa-trash" onclick="asd()"> Hapus </i></a>
-                                <a class="btn btn-info " target="_blank" href="<?= base_url('print/'.$key['no_plat']) ?>"><i class="fas fa-print" > Print Barcode </i></a>
+                                <a href="<?= base_url('Parkiran/deleteCarDept/'.$key['no_plat'])?>" class="btn btn-danger"><i class="fas fa-trash" > Hapus </i></a>
+                                <a class="btn btn-info " target="_blank" href="<?= base_url('print/'.$key['no_plat']) ?>"><i class="fas fa-print" > Print QR Code </i></a>
                             </td>
                         </tr>
                         <?php $num++ ?>
@@ -71,44 +72,49 @@
       <!-- /.container-fluid -->
     </section>
 
-   <script type="text/javascript">
-    function asd() {
-        var id = $(this).parents("td").parents("tr").attr("id");
-      console.log(id);
+  
+  
+   <!-- //<script type="text/javascript"> -->
+   
+
+
+    <!-- // function asd() {
+    //     var id = $(this).parents("td").parents("tr").attr("id");
+    //   console.log(id);
     
-       swal({
-        title: "Are you sure?",
-        text: "You will not be able to recover this imaginary file!",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonClass: "btn-danger",
-        confirmButtonText: "Yes, delete it!",
-        cancelButtonText: "No, cancel plx!",
-        closeOnConfirm: false,
-        closeOnCancel: false
-      },
-      function(isConfirm) {
-        if (isConfirm) {
-          $.ajax({
-             url: '/item-list/'+id,
-             type: 'DELETE',
-             error: function() {
-                alert('Something is wrong');
-             },
-             success: function(data) {
-                  $("#"+id).remove();
-                  swal("Deleted!", "Your imaginary file has been deleted.", "success");
-             }
-          });
-        } else {
-          swal("Cancelled", "Your imaginary file is safe :)", "error");
-        }
-      });
+    //    swal({
+    //     title: "Are you sure?",
+    //     text: "You will not be able to recover this imaginary file!",
+    //     type: "warning",
+    //     showCancelButton: true,
+    //     confirmButtonClass: "btn-danger",
+    //     confirmButtonText: "Yes, delete it!",
+    //     cancelButtonText: "No, cancel plx!",
+    //     closeOnConfirm: false,
+    //     closeOnCancel: false
+    //   },
+    //   function(isConfirm) {
+    //     if (isConfirm) {
+    //       $.ajax({
+    //          url: '/item-list/'+id,
+    //          type: 'DELETE',
+    //          error: function() {
+    //             alert('Something is wrong');
+    //          },
+    //          success: function(data) {
+    //               $("#"+id).remove();
+    //               swal("Deleted!", "Your imaginary file has been deleted.", "success");
+    //          }
+    //       });
+    //     } else {
+    //       swal("Cancelled", "Your imaginary file is safe :)", "error");
+    //     }
+    //   });
      
-    }
-    $(".remove").click(function(){
+    // }
+    // $(".remove").click(function(){
       
-    });
+    // }); -->
     
-</script>
+<!-- </script> -->
 <?= $this->endSection() ?>
